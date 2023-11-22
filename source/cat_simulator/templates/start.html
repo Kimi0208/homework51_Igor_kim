@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StartGamePage</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div>
+    <h2>Введите имя кота</h2>
+    <form action="cat_stat/" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="введите имя кота"/><br/>
+
+    <br/>
+    <input type="submit" value="Начать игру"/>
+    </form>
+</div>
+</body>
+</html>
